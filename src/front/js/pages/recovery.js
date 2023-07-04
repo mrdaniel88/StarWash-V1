@@ -17,7 +17,7 @@ export const RecoveryPassword = () => {
       }
 
 	return (
-    <div style={{ backgroundColor: '#24292e' }}>
+    <div>
         <div className="container min-vh-100" >
 
         <h3>Forgot your Password?</h3>
