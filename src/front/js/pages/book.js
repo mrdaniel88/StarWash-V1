@@ -137,7 +137,7 @@ export const Book = () => {
               </div>
             </div>
             <br></br>
-            <div className="d-grid gap-2 col-6 mx-auto" style={{ "padding-botom": "2px" }}>
+            <div className="d-grid gap-2 col-6 mx-auto  d-flex justify-content-center" style={{ "padding-botom": "2px" }}>
               <Link to="/shoppingCar">
                 <button className="nav-button btn btn-dark justify-content-md-center">Go to Shopping Cart
                 </button>
