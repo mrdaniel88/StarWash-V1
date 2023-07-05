@@ -3,14 +3,15 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { Link, useNavigate } from "react-router-dom";
-
+import { Button, Modal } from 'react-bootstrap';
 
 // Para iniciar sesión
 
 export const LoginUsuario = () => {
   const { store, actions } = useContext(Context);
   const navigate = useNavigate()
-  // function Password() {
+  const [error, setError] = useState(false)
+
   //   // Initialize a boolean state
   const [passwordShown, setPasswordShown] = useState(false);
   const [passwordShowneye, setPasswordShowneye] = useState(false);
@@ -22,11 +23,16 @@ export const LoginUsuario = () => {
     setPasswordShowneye(!passwordShowneye)
   };
 
+
+
   async function submitForm(e) {
     e.preventDefault()
     let data = new FormData(e.target)
     let resp = await actions.userLogin(data.get("email"), data.get("password"))
-    if (resp >= 400) {
+    console.log("RESP: ",resp)
+    if (resp.code >= 400) {
+      setError(true)
+      console.log("ERROR")
       return
     }
     navigate("/book")
@@ -35,7 +41,13 @@ export const LoginUsuario = () => {
 
   return (
     <div style={{ backgroundColor: '#24292e', color: '#eeffff' }}>
+       {error && (
+                <div className="alert alert-danger" role="alert">
+                    Ivalid Email or Password
+                </div>
+            )}
       <div className="container min-vh-100" >
+     
         <h3>Sing in</h3>
         <form onSubmit={submitForm}>
           <div className="col-md-12 position-relative">
@@ -63,6 +75,7 @@ export const LoginUsuario = () => {
           <div className="col-12 mb-3 ">
             <div className="d-grid gap-2">
               <button className="nav-button btn btn-dark" type="submit">Login</button>
+
             </div>
           </div>
           <Link to="/Register">
@@ -77,8 +90,11 @@ export const LoginUsuario = () => {
               </div>
             </Link>
           </div>
+
         </form>
+
       </div>
+
     </div>
   );
 };

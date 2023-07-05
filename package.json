@@ -78,6 +78,7 @@
 		"mercadopago": "^1.5.16",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
+		"react-bootstrap": "^2.8.0",
 		"react-calendar-datetime-picker": "^1.6.3",
 		"react-date-picker": "^10.2.0",
 		"react-datetime-picker": "^5.2.0",
