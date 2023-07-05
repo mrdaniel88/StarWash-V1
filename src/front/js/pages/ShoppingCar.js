@@ -51,8 +51,8 @@ export const ShoppingCar = () => {
                                 <div className="card-body">
 
                                     {user_services.map((element, index) => (
-                                        <div className="col-12 d-flex flex-row mb-3" key={index}>
-                                            <p>
+                                        <div className="col-12 d-flex flex-row mb-3 " key={index}>
+                                            <p className="align-self-center">
                                                 {/* ID:{element.id} <br></br> */}
                                                 {element.servicesName} <br></br>
                                                 $ USD: {element.servicesPrice}<br></br>
