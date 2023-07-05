@@ -2,7 +2,7 @@ import React from "react";
 // import {  } from "react-router";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
-import "../../styles/shoppingCar.css";
+import "../../styles/home.css";
 import { useNavigate, useParams } from "react-router-dom";
 
 
@@ -31,10 +31,10 @@ export const ShoppingCar = () => {
 
     return (
         <>
-        <div style={{ backgroundColor: '#40768C' }}  >
+        <div style={{ backgroundColor: '#24292e', color: '#eeffff' }}  >
             <div className="container min-vh-100" >
                 <div className="text-black text-center" >
-                    <div className="card border-0" style={{  backgroundColor: '#40768C' }}>
+                    <div className="card border-0" style={{  backgroundColor: '#24292e', color: '#eeffff' }}>
                         <div className="row g-0">
                             <h1 className="card-title p-5">ShoppingCart</h1> <br></br>
                             <div className="col-md-4" >
@@ -51,7 +51,7 @@ export const ShoppingCar = () => {
                                 <div className="card-body">
 
                                     {user_services.map((element, index) => (
-                                        <div className="col-12" key={index}>
+                                        <div className="col-12 d-flex flex-row mb-3" key={index}>
                                             <p>
                                                 {/* ID:{element.id} <br></br> */}
                                                 {element.servicesName} <br></br>
@@ -59,7 +59,7 @@ export const ShoppingCar = () => {
                                                 {element.date}<br></br>
                                             </p>
 
-                                            <button className="btn btn-outline-dark" onClick={() => actions.deleteFavorites(element.id)}><i className="fa-regular fa-trash-can"></i></button>
+                                            <button className="nav-button btn btn-danger ms-5" onClick={() => actions.deleteFavorites(element.id)}><i className="fa-regular fa-trash-can"></i></button>
                                         </div>
                                     ))}
 
@@ -72,7 +72,7 @@ export const ShoppingCar = () => {
                                 <h2>
                                     Total USD = ${store.totalValue}
                                 </h2>
-                                <button className="btn btn-dark" onClick={pagoMercadoPago}>Pay Here
+                                <button className="nav-button btn btn-dark" onClick={pagoMercadoPago}>Pay Here
                                 </button>
                             </p>
                         </div>
