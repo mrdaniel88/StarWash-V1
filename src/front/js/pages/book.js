@@ -90,7 +90,7 @@ export const Book = () => {
               </h2>
               <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                 <div className="accordion-body" >
-                  <DtPicker onChange={handleDateChange}  />
+                  <DtPicker onChange={handleDateChange} withTime={true} showTimeInput={true} clearBtn={true} clockLabel="clock" clockFromLabel="from" clockToLabel="to" />
                   {/* <DateTimePicker onChange={setDateService} value={dateService} /> */}
                   {console.log(dateService)}
                   {/* {typeof dateService == 'null' ? setDateService(new Date(dateService.year, dateService.month, dateService.day)) : undefined} */}
