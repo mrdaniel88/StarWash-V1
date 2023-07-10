@@ -41,8 +41,9 @@ export const Book = () => {
   };
 
   const handleDateChange = (newDate) => {
-    if (newDate && newDate.year && newDate.month && newDate.day) {
-      const selectedDate = new Date(newDate.year, newDate.month - 1, newDate.day);
+    console.log(newDate)
+    if (newDate && newDate.year && newDate.month && newDate.day && newDate.hour && newDate.minute) {
+      const selectedDate = new Date(newDate.year, newDate.month - 1, newDate.day, newDate.hour, newDate.minute);
       setDateService(selectedDate);
     }
   };

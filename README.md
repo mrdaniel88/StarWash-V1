@@ -1,3 +1,41 @@
+# StarWash
+
+Is a WebApp focused on users who want to schedule a car wash service at home.
+
+### Loading test data
+
+Add to the frontend URL on your broser /testdata and click submit to load test data for the services.
+
+### .env file
+
+The .env file must have the following global variables. You can find the cretion of this file on the Installation section.
+
+```
+  # Back-End Variables
+  DATABASE_URL=postgres://gitpod:postgres@localhost:5432/example
+  FLASK_APP_KEY="any key here"
+  FLASK_APP=src/app.py
+  FLASK_ENV=development
+
+  # Front-End Variables
+  BASENAME=/
+  BACKEND_URL=
+  FRONTEND_URL=
+
+  #If you're using Sendgrid
+  SENDGRID_API_KEY=
+  SENDGRID_SENDER=
+```
+### Screenshots
+
+![Home](src/front/img/home.PNG)
+![Login](src/front/img/Login.PNG)
+![Signup](src/front/img/Signup.PNG)
+![Services](src/front/img/Services.PNG)
+![Book](src/front/img/Book.PNG)
+![Cart](src/front/img/Cart.PNG)
+
+
 # WebApp boilerplate with React JS and Flask API
 
 Build web applications using React.js for the front end and python/flask for your backend API.

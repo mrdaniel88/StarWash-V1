@@ -56,6 +56,7 @@ export const ShoppingCar = () => {
                                                 {/* ID:{element.id} <br></br> */}
                                                 {element.servicesName} <br></br>
                                                 $ USD: {element.servicesPrice}<br></br>
+                                                {console.log(element.date)}
                                                 {element.date}<br></br>
                                             </p>
 
